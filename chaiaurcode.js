@@ -21,16 +21,16 @@ form.addEventListener('submit', function (e) {
     else {
         const bmi = (weight / ((height * height) / 10000)).toFixed(2)
         //result
-        results.innerHTML = `<span>${bmi}</span>` 
+        document.getElementById("popup-1").classList.toggle("active");
+        results.innerHTML = `Your BMI is: <span>${bmi}</span>` 
         if(bmi>= 18.6 && bmi<=24.9){
             results.style.color = `green`
         }
 
     }
 
-
-
-
-
-
 });
+
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+}
